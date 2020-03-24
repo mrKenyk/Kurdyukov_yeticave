@@ -5,7 +5,8 @@ require_once ('functions.php');
 $page_content = conpile_template('index.php',
     [
         'category_list'=> $category_list,
-        'name_list'=> $name_list
+        'name_list'=> $name_list,
+        'lot_time_remaining' => $lot_time_remaining
     ]);
 
 $layout_content = conpile_template('layout.php', [

@@ -1,6 +1,20 @@
 <?php
 $is_auth = rand(0, 1);
 
+$now = strtotime('now');
+
+$tomorrow = strtotime('tomorrow');
+
+$lot_time_remaining__ts = $tomorrow - $now;
+
+$lot_time_remaining__hours = floor($lot_time_remaining__ts / 3600);
+
+$lot_time_remaining__min_ts = $lot_time_remaining__ts - $lot_time_remaining__hours * 3600;
+
+$lot_time_remaining__min = floor($lot_time_remaining__min_ts / 60);
+
+$lot_time_remaining = sprintf('%02d:%02d', $lot_time_remaining__hours, $lot_time_remaining__min);
+
 $user_name = 'Kirill'; // укажите здесь ваше имя
 
 $category_list = [
